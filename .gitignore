@@ -1,0 +1,6 @@
+#Ignores all files with the following file extensions:
+*.png
+*.txt
+*.doc
+*.docx
+*.jpg
