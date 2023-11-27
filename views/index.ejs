@@ -1,3 +1,4 @@
+index.ejs
 <!-- views/index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@
 <body>
     <div class="container">
         <h1>User List</h1>
-        <a href="/users/delete" class="delete-user-link">Delete User</a>
+        <a href="/logout" class="logout">Logout</a>
         <ul class="user-list">
             <% users.forEach(user=> { %>
                 <li class="user-item">
@@ -31,6 +32,7 @@
                 <% }); %>
         </ul>
         <a href="/users/add" class="add-user-link">Add User</a>
+        <a href="/users/delete" class="delete-user-link">Delete User</a>
     </div>
 </body>
 
