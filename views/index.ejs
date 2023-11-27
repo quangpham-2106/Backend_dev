@@ -1,0 +1,37 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - User List</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>User List</h1>
+        <a href="/users/delete" class="delete-user-link">Delete User</a>
+        <ul class="user-list">
+            <% users.forEach(user=> { %>
+                <li class="user-item">
+                    <a href="/users/display/<%= user._id %>" class="user-link">
+                        <div class="user-avatar"></div>
+                        <div class="user-details">
+                            <h2>
+                                <%= user.name %>
+                            </h2>
+                            <p>
+                                Email: <%= user.email %>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <% }); %>
+        </ul>
+        <a href="/users/add" class="add-user-link">Add User</a>
+    </div>
+</body>
+
+</html>
