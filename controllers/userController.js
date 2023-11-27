@@ -11,6 +11,17 @@ router.get('/', async (req, res) => {
 router.get('/add', (req, res) => {
     res.render('add');
 });
+// Edit user page
+router.get('/edit/:id', async (req, res) => {
+    const user = await User.findById(req.params.id);
+    res.render('edit', { user });
+});
+
+// Display user page
+router.get('/display/:id', async (req, res) => {
+    const user = await User.findById(req.params.id);
+    res.render('display', { user });
+});
 
 
 module.exports = router;
