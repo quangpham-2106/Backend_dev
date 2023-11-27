@@ -7,10 +7,12 @@ router.get('/', async (req, res) => {
     const users = await User.find();
     res.render('index', { users });
 });
+
 // Add user page
 router.get('/add', (req, res) => {
     res.render('add');
 });
+
 // Edit user page
 router.get('/edit/:id', async (req, res) => {
     const user = await User.findById(req.params.id);
@@ -23,6 +25,18 @@ router.get('/display/:id', async (req, res) => {
     res.render('display', { user });
 });
 
+// Update user page
+router.post('/update/:id', async (req, res) => {
+    await User.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect('/users');
+});
+
+// Add user endpoint
+router.post('/add', async (req, res) => {
+    await User.create(req.body);
+    res.redirect('/users');
+});
+
 // Delete user endpoint
 router.get('/delete/:id', async (req, res) => {
     await User.findByIdAndDelete(req.params.id);
@@ -33,14 +47,14 @@ router.get('/delete/:id', async (req, res) => {
 router.get('/delete', (req, res) => {
     res.render('deleteuser');
   });
-
+  
   router.post('/delete', async (req, res) => {
     try {
       const { name } = req.body;
-
+  
       // Find and delete the user by username
       const deletedUser = await User.findOneAndDelete({ name });
-
+  
       if (deletedUser) {
         res.redirect('/users');
       } else {
