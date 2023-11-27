@@ -1,0 +1,222 @@
+/* public/styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(45deg, #ff6b6b, #ffd166);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #ff6b6b;
+    text-align: center;
+  }
+  
+  .user-list {
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .user-item {
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .user-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .user-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .user-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .user-details {
+    flex: 1;
+  }
+  
+  h3 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  p {
+    margin: 5px 0 0;
+    color: #555;
+  }
+  
+  .add-user-link {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #118ab2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .add-user-link:hover {
+    background-color: #06d6a0;
+  }
+  
+  /* Additional Styles for User Details Page */
+  
+  .user-details-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid #3498db;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .user-avatar-details {
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .user-info-details {
+    flex: 1;
+  }
+  
+  h2 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .user-actions {
+    display: flex;
+  }
+  
+  .edit-link,
+  .delete-link,
+  .back-link {
+    margin-right: 10px;
+    color: #ef476f;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .edit-link:hover,
+  .delete-link:hover,
+  .back-link:hover {
+    background-color: #ef476f;
+    color: #fff;
+  }
+  
+  .back-link {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .back-link:hover {
+    background-color: #2c3e50;
+  }
+  
+  /* Additional Styles for Edit User Page */
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ef476f;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  button {
+    background-color: #118ab2;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #06d6a0;
+  }
+  
+  /* Additional Styles for Delete User Page */
+  .delete-user-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .confirmation-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ef476f;
+  }
+  
+  .confirmation-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Additional Styles for User Not Found Page */
+  .user-not-found-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .user-not-found-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ef476f;
+  }
