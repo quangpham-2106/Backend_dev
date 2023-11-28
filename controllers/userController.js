@@ -6,7 +6,7 @@ const User = require('../models/user');
 // Middleware to check if the user is logged in
 const isLoggedIn = (req, res, next) => {
     if (req.session.isLoggedIn) {
-        next(); // Continue to the next middleware or route handler
+        next();
     } else {
         res.redirect('/login'); // Redirect to the login page if not logged in
     }
